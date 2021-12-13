@@ -32,7 +32,7 @@
             /* toString method to return information about products */
             toString() {
 
-                return ('<h1>' + this.postname + '</h1>' + '<br>' + '<img>' + this.img + '<br>' + this.diet + '<br>' + this.food + '<br>' + this.recipe + '<br>' + this.feedLikes);
+                return ('<h1>' + this.postname + '</h1>' + '<br>' + this.diet + '<br>' + this.food + '<br>' + this.recipe + '<br>' + this.feedLikes);
 
             }
         }
@@ -42,17 +42,52 @@
         /* arrays for object properties */
         let feed = [];
         let postnames = ['1', '2', '3', '4', '5', '6'];
-        let imgs = ['meal1.jpeg', 'meal2.jpeg', 'meal3.jpeg', 'meal4.jpeg', 'meal5.jpeg'];
+        let imgs = ['meal1.jpeg ', 'meal2.jpeg ', 'meal3.jpeg ', 'meal4.jpeg ', 'meal5.jpeg'];
         let diets = ['Omnivore', 'Vegetarian', 'Omnivore', 'Vegetarian', 'Omnivore'];
         let foods = ['Food1', 'Food2', 'Food3', 'Food4', 'Food5'];
         let recipes = ['no', 'yes', 'later'];
         let feedLikes = ['1', '2', '3', '4', '5', '6'];
 
+        window.addEventListener('load', (event) => {
+            for (let i = 0; i < 1; i++) {
+                feed.push(new Meal(postnames[i], imgs[i], diets[i], foods[i], recipes[i], feedLikes[i]));
+                /* displays object properties in img tag with variable */
+                var profilePics = document.getElementById('profilePics');
+                profilePics.src += imgs[i].toString();
+            }
+            writeMoreInFeed()
 
-        /* for loop to create objects */
+
+
+
+        });
+
+
+
+
+        /* for loop to create objects 
         for (let i = 0; i < 1; i++) {
             feed.push(new Meal(postnames[i], imgs[i], diets[i], foods[i], recipes[i], feedLikes[i]));
+ 
+ 
+        }*/
+
+        function writeMoreInFeed() {
+
+            document.getElementById("post").innerHTML = "";
+            document.getElementById("post").style.color = "blue";
+
+            for (let i = 0; i < feed.length; i++) {
+                document.getElementById("post").innerHTML += feed[i].toString() + "<br>";
+            }
+
         }
+
+
+
+
+
+
 
     </script>
 </head>
@@ -102,48 +137,26 @@
 
             <div class="center">
 
-                <div id="post1">
-                    <script type="text/javascript">
+                <div id="post" class="post">
 
-                        window.addEventListener('load', (event) => {
-                            post1 = document.getElementById('post1');
-                            post1.innerHTML = feed[0].toString();
-                        });
 
-                    </script>
                 </div>
+                <img id="profilePics" class="profilePics">
+                <!-- <script>
 
-                <div class="postname" id="post2">
-                    <script type="text/javascript">
+                    images.addEventListener('load', (event) => {
+                        for (let i = 0; i < 6; i++) {
+                            feed.push(new Meal(imgs[i]));
+                        }
+                        writeMoreInFeed()
+                    });
+                </script> -->
 
-                        window.addEventListener('load', (event) => {
-                            post2 = document.getElementById('post2');
-                            post2.innerHTML = feed[1].toString();
-                        });
 
-                    </script>
-                </div>
-                <div class="postname" id="post3">
-                    <script type="text/javascript">
 
-                        window.addEventListener('load', (event) => {
-                            post3 = document.getElementById('post3');
-                            post3.innerHTML = feed[2].toString();
-                        });
 
-                    </script>
-                </div>
 
-                <div class="postname" id="post4">
-                    <script type="text/javascript">
-
-                        window.addEventListener('load', (event) => {
-                            post4 = document.getElementById('post4');
-                            post4.innerHTML = feed[3].toString();
-                        });
-
-                    </script>
-                </div>
+            </div>
 
 
 
@@ -156,6 +169,10 @@
 
         </body>
 
+
+        <script>
+            writeMoreInFeed();
+        </script>
 
 
 </html>
