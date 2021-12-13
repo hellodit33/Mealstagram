@@ -1,0 +1,135 @@
+body {
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar custom styling */
+
+/* Alinged text to center for better visuals */
+.nav-link-container {
+  text-align: center;
+}
+
+/* Styled icon size */
+.container-lg > a > img {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+}
+
+.navbar .container-lg a {
+  font-size: 1.4rem;
+}
+
+/* Menu-toggle icon size */
+#img-toggler-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+}
+
+/* Removed border from navbar-toggler */
+.navbar-toggler {
+  border: none;
+  position: relative;
+  z-index: 3;
+}
+
+@media (min-width: 992px) {
+  .brand-name {
+    display: none;
+  }
+}
+@media (max-width: 992px) {
+  .container-lg > a {
+    display: none;
+  }
+
+  .navbar {
+    position: relative;
+  }
+  .brand-name {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: black;
+  }
+
+  .brand-wrapper .brand-name {
+    font-size: 2.5rem;
+  }
+
+  .brand-wrapper {
+    height: 94px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .brand-name {
+    left: unset;
+    right: 50px;
+    transform: translate(0, -50%);
+  }
+  .brand-wrapper .brand-name {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .brand-name {
+    right: 25px;
+  }
+}
+/* Navbar end */
+
+/* Hero-section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-section .hero-container img {
+  display: inline-block;
+  width: 100%;
+}
+
+/* main section */
+.main h2,
+.main p {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Mid section, this is before footer */
+.container-lg.mid {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.container-lg.mid .mid-link {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: black;
+  transition: ease-in-out 300ms;
+}
+
+.container-lg.mid .mid-link:hover {
+  background-color: burlywood;
+  border-radius: 5px;
+  padding: 3px 4px;
+}
+
+.container-lg.mid h3 {
+  padding: 10px 0 10px 0;
+}
