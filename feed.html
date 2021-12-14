@@ -32,7 +32,7 @@
             /* toString method to return information about products */
             toString() {
 
-                return ('<h1>' + this.postname + '</h1>' + '<br>' + this.diet + '<br>' + this.food + '<br>' + this.recipe + '<br>' + this.feedLikes);
+                return ('<h1>' + this.postname + '</h1>' + '<br>' + this.img + '<br>' + '<h2>' + this.diet + '</h2>' + '<h2>' + this.food + '</h2>' + '<h2>' + this.recipe + '</h2>' + '<p>' + this.feedLikes + '</p>' + '<br> <br>');
 
             }
         }
@@ -41,19 +41,17 @@
         //feed
         /* arrays for object properties */
         let feed = [];
-        let postnames = ['1', '2', '3', '4', '5', '6'];
-        let imgs = ['meal1.jpeg ', 'meal2.jpeg ', 'meal3.jpeg ', 'meal4.jpeg ', 'meal5.jpeg'];
-        let diets = ['Omnivore', 'Vegetarian', 'Omnivore', 'Vegetarian', 'Omnivore'];
-        let foods = ['Food1', 'Food2', 'Food3', 'Food4', 'Food5'];
-        let recipes = ['no', 'yes', 'later'];
-        let feedLikes = ['1', '2', '3', '4', '5', '6'];
+        let postnames = ['Apple Pie with Cinnamon', 'Delicious summer sallad with my own tomatoes and cucumbers', 'A great shakshouka', 'A homebaked focaccia', 'Lebanese food on a Saturday evening'];
+        let imgs = ['<img src="meal1.jpeg">', '<img src="meal2.jpeg">', '<img src="meal3.jpeg">', '<img src="meal4.jpeg">', '<img src="meal5.jpeg">'];
+        let diets = ['Vegetarian', 'Vegetarian', 'Omnivore', 'Omnivore', 'Vegan'];
+        let foods = ['Apple Pie', 'Sallad', 'Shakshouka', 'Focaccia', 'Lebanese food'];
+        let recipes = ['later', 'later', 'later', 'later', 'later'];
+        let feedLikes = ['56', '87', '45', '16', '98'];
 
         window.addEventListener('load', (event) => {
-            for (let i = 0; i < 1; i++) {
+            for (let i = 0; i < 5; i++) {
                 feed.push(new Meal(postnames[i], imgs[i], diets[i], foods[i], recipes[i], feedLikes[i]));
                 /* displays object properties in img tag with variable */
-                var profilePics = document.getElementById('profilePics');
-                profilePics.src += imgs[i].toString();
             }
             writeMoreInFeed()
 
@@ -75,7 +73,7 @@
         function writeMoreInFeed() {
 
             document.getElementById("post").innerHTML = "";
-            document.getElementById("post").style.color = "blue";
+
 
             for (let i = 0; i < feed.length; i++) {
                 document.getElementById("post").innerHTML += feed[i].toString() + "<br>";
@@ -141,7 +139,7 @@
 
 
                 </div>
-                <img id="profilePics" class="profilePics">
+
                 <!-- <script>
 
                     images.addEventListener('load', (event) => {
