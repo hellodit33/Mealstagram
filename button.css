@@ -1,0 +1,183 @@
+/* colors for button */
+/* the smile emoji button */
+.smile {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  width: 90px;
+  height: 40px;
+  background: white;
+  border: 0;
+  font-size: .9rem;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  border-radius: 6px;
+  outline: none;
+  /*the smile button like amount box*/
+}
+
+.smile:hover {
+  color: #cc8400;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.smile:active {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.smile .smileLike {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #cc8400;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  border-radius: 100px;
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.smile .smileLike:after {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #cc8400;
+}
+
+/* the sad emoji button */
+.sad {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  width: 90px;
+  height: 40px;
+  background: white;
+  border: 0;
+  font-size: .9rem;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  border-radius: 6px;
+  outline: none;
+  /*the sad button like amount box*/
+}
+
+.sad:hover {
+  color: #cc8400;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.sad:active {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.sad .sadLike {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #cc8400;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  border-radius: 100px;
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.sad .sadLike:after {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #cc8400;
+}
+
+.meh {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  width: 90px;
+  height: 40px;
+  background: white;
+  border: 0;
+  font-size: .9rem;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  border-radius: 6px;
+  outline: none;
+  /*the sad button like amount box*/
+}
+
+.meh:hover {
+  color: #cc8400;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.meh:active {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.meh .mehLike {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #cc8400;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  border-radius: 100px;
+  opacity: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.meh .mehLike:after {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #cc8400;
+}
+/*# sourceMappingURL=button.css.map */

@@ -1,0 +1,179 @@
+/* colors for button */
+$light-color:  white;
+$dark-color:   black;
+$accent-color: orange;
+
+
+/* the smile emoji button */
+.smile {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    width: 90px;
+    height: 40px;
+    background: $light-color;
+    border: 0;
+    font-size: .9rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    border-radius: 6px;
+    
+    outline: none;
+    &:hover {
+      color: darken($accent-color, 10%);
+      transform: scale(1.2);
+    }
+    
+    &:active {
+      transform: scale(1.4);
+    }
+    
+    /*the smile button like amount box*/
+    .smileLike {
+      position: absolute;
+      top: 55px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: darken($accent-color, 10%);
+      color: rgba($dark-color, .5);
+      padding: 10px 0;
+      border-radius: 100px;
+      opacity: 1;
+      transition: all .2s ease-in-out;
+
+      &:after {
+        position: absolute;
+        top: -7px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid darken($accent-color, 10%); 
+      }
+    }
+  }
+  /* the sad emoji button */
+  .sad {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    width: 90px;
+    height: 40px;
+    background: $light-color;
+    border:0;
+    font-size: .9rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: none;
+    &:hover {
+      color: darken($accent-color, 10%);
+      transform: scale(1.2);
+      
+
+    }
+    
+    &:active {
+      transform: scale(1.4);
+    }
+    
+
+    /*the sad button like amount box*/
+    .sadLike {
+      position: absolute;
+      top: 55px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: darken($accent-color, 10%);
+      color: rgba($dark-color, .5);
+      padding: 10px 0;
+      border-radius: 100px;
+      opacity: 1;
+      transition: all .2s ease-in-out;
+      
+      &:after {
+        position: absolute;
+        top: -7px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid darken($accent-color, 10%); 
+      }
+    }
+  }
+
+
+  .meh {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+    width: 90px;
+    height: 40px;
+    background: $light-color;
+    border:0;
+    font-size: .9rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    border-radius: 6px;
+    outline: none;
+    &:hover {
+      color: darken($accent-color, 10%);
+      transform: scale(1.2);
+      
+
+    }
+    
+    &:active {
+      transform: scale(1.4);
+    }
+    
+
+    /*the sad button like amount box*/
+    .mehLike {
+      position: absolute;
+      top: 55px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: darken($accent-color, 10%);
+      color: rgba($dark-color, .5);
+      padding: 10px 0;
+      border-radius: 100px;
+      opacity: 1;
+      transition: all .2s ease-in-out;
+      
+      &:after {
+        position: absolute;
+        top: -7px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid darken($accent-color, 10%); 
+      }
+    }
+  }
