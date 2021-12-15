@@ -1,25 +1,21 @@
 
 // like button function
 
-function like(){
-    var a = document.getElementById("smileLike").innerHTML
-    a++
-    document.getElementById("smileLike").innerHTML=a
-    document.getElementById("smileButton").disabled = true;
-}
-
-
-function sadLike(){
-    var a = document.getElementById("sadLike").innerHTML
-    a++
-    document.getElementById("sadLike").innerHTML=a
-    document.getElementById("sadButton").disabled = true;
-}
-
-
-function mehLike(){
-    var a = document.getElementById("mehLike").innerHTML
-    a++
-    document.getElementById("mehLike").innerHTML=a
-    document.getElementById("mehButton").disabled = true;
+function like(bnum){
+    if (bnum==1){
+        var like = document.getElementById("smileLike").innerHTML
+        like++
+        document.getElementById("smileLike").innerHTML=like
+        document.getElementById("smileButton").disabled = true;
+    }else if(bnum==2){
+        var like2 = document.getElementById("sadLike").innerHTML
+        like2++
+        document.getElementById("sadLike").innerHTML=like2
+        document.getElementById("sadButton").disabled = true;
+    } else if(bnum==3){
+        var like3 = document.getElementById("mehLike").innerHTML
+        like3++
+        document.getElementById("mehLike").innerHTML=like3
+        document.getElementById("mehButton").disabled = true;
+    }
 }
