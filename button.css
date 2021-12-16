@@ -1,6 +1,6 @@
 /* colors for button */
 /* the smile emoji button */
-.smile {
+.nice {
   position: relative;
   top: 0;
   left: 0;
@@ -20,18 +20,18 @@
   /*the smile button like amount box*/
 }
 
-.smile:hover {
+.nice:hover {
   color: #cc8400;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.smile:active {
+.nice:active {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
 
-.smile .smileLike {
+.nice .niceLike {
   position: absolute;
   top: 55px;
   left: 0;
@@ -46,7 +46,7 @@
   transition: all .2s ease-in-out;
 }
 
-.smile .smileLike:after {
+.nice .niceLike:after {
   position: absolute;
   top: -7px;
   left: 0;
@@ -61,7 +61,7 @@
 }
 
 /* the sad emoji button */
-.sad {
+.tasty {
   position: relative;
   top: 0;
   left: 0;
@@ -81,18 +81,18 @@
   /*the sad button like amount box*/
 }
 
-.sad:hover {
+.tasty:hover {
   color: #cc8400;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.sad:active {
+.tasty:active {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
 
-.sad .sadLike {
+.tasty .tastyLike {
   position: absolute;
   top: 55px;
   left: 0;
@@ -107,7 +107,7 @@
   transition: all .2s ease-in-out;
 }
 
-.sad .sadLike:after {
+.tasty .tastyLike:after {
   position: absolute;
   top: -7px;
   left: 0;
@@ -121,7 +121,7 @@
   border-bottom: 8px solid #cc8400;
 }
 
-.meh {
+.wow {
   position: relative;
   top: 0;
   left: 0;
@@ -141,18 +141,18 @@
   /*the sad button like amount box*/
 }
 
-.meh:hover {
+.wow:hover {
   color: #cc8400;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.meh:active {
+.wow:active {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
 }
 
-.meh .mehLike {
+.wow .wowLike {
   position: absolute;
   top: 55px;
   left: 0;
@@ -167,7 +167,7 @@
   transition: all .2s ease-in-out;
 }
 
-.meh .mehLike:after {
+.wow .wowLike:after {
   position: absolute;
   top: -7px;
   left: 0;
