@@ -4,7 +4,7 @@ $dark-color:   black;
 $accent-color: orange;
 
 
-/* the smile emoji button */
+/* the thumbs up emoji button */
 .nice {
     position: relative;
     top: 0;
@@ -31,7 +31,7 @@ $accent-color: orange;
       transform: scale(1.4);
     }
     
-    /*the smile button like amount box*/
+    /*the thumbs up emoji like box*/
     .niceLike {
       position: absolute;
       top: 55px;
@@ -60,7 +60,7 @@ $accent-color: orange;
       }
     }
   }
-  /* the sad emoji button */
+  /* the tasty emoji button */
   .tasty {
     position: relative;
     top: 0;
@@ -89,7 +89,7 @@ $accent-color: orange;
     }
     
 
-    /*the sad button like amount box*/
+    /*the tasty emoji like box*/
     .tastyLike {
       position: absolute;
       top: 55px;
@@ -148,7 +148,7 @@ $accent-color: orange;
     }
     
 
-    /*the sad button like amount box*/
+    /*the wow emoji like box*/
     .wowLike {
       position: absolute;
       top: 55px;
