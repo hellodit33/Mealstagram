@@ -24,45 +24,55 @@ let profiles = [];
 /* for loop to create objects */
 for (let i = 0; i <1; i++) {
     profiles.push(new Profile(names[i], diets[i], ages[i], foods[i], imgs[i]));
-}
-
+}   
+    
 /* displays object properties in img and p tags */
 window.addEventListener('load', (event) => {
 
-        /* displays object properties in p tag */
-        nameDisplay = document.getElementById('nameDisplay');
-        nameDisplay.innerHTML = names.toString();
+    /* displays object properties in p tag */
+    nameDisplay = document.getElementById('nameDisplay');
+    nameDisplay.innerHTML = names.toString();
 
-        /* displays object properties in p tag  */
-        dietDisplay = document.getElementById('dietDisplay');
-        dietDisplay.innerHTML = diets.toString();
+    /* displays object properties in p tag  */
+    dietDisplay = document.getElementById('dietDisplay');
+    dietDisplay.innerHTML = diets.toString();
 
-        /* displays object properties in p tag  */
-        ageDisplay = document.getElementById('ageDisplay');
-        ageDisplay.innerHTML = ages.toString();
+    /* displays object properties in p tag  */
+    ageDisplay = document.getElementById('ageDisplay');
+    ageDisplay.innerHTML = ages.toString();
 
-        /* displays object properties in p tag  */
-        foodDisplay = document.getElementById('foodDisplay');
-        foodDisplay.innerHTML = foods.toString();
+    /* displays object properties in p tag  */
+    foodDisplay = document.getElementById('foodDisplay');
+    foodDisplay.innerHTML = foods.toString();
 
-        /* displays object properties in img tag with variable */
-        var profilePics = document.getElementById('profilePics');
-        profilePics.src = imgs.toString();
-       
-    });
+    /* displays object properties in img tag with variable */
+    var profilePics = document.getElementById('profilePics');
+    profilePics.src = imgs.toString();
+   
+});
 
-// var btn = document.getElementById('btn');
-// btn.addEventListener('click', function newProfile() {
 
-//     let name = document.getElementById('nameInput').value;
-//     let age = document.getElementById('ageInput').value;
-//     let food = document.getElementById('foodInput').value;
-//     let diet = document.getElementById('browser').value;
+/* function to change stylesheet and css styling with button */
+function toggleTheme() {
+    // obtain an array of all <link> elements.
+    var theme = document.getElementsByTagName('link')[0];
+    var img = document.getElementById('profile');
 
-//     profiles.push(new Profile (name, age, food, diet));
-// });
-    
-    
-    
-    
-    
+    // changes value of link href to change stylesheet
+    if (theme.getAttribute('href') == 'styleprofile.css') {
+        theme.setAttribute('href', 'stylechange.css');
+        img.src = 'img/profile2.png'
+    } else {
+        theme.setAttribute('href', 'styleprofile.css');
+        img.src = 'img/profile.png'
+    }
+}
+
+
+const toggleDropdown = document.querySelector(".sub-links.container");
+console.log(toggleDropdown);
+const menu = document.querySelector(".drop-down.icon");
+
+menu.addEventListener("click", () => {
+  toggleDropdown.classList.toggle("show");
+});
