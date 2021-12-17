@@ -32,7 +32,7 @@
             /* toString method to return information about products */
             toString() {
 
-                return ('<h1>' + this.postname + '</h1>' + '<br>' + this.img + '<br>' + '<h2>' + this.diet + '</h2>' + '<h2>' + this.food + '</h2>' + '<h2>' + this.recipe + '</h2>' + '<p>' + this.feedLikes + '</p>' + '<br> <br>');
+                return ('<h1>' + this.postname + '</h1>' + '<br>' + this.img + '<br>' + '<h2 class="diet">' + this.diet + '</h2>' + '<h2 class="food">' + this.food + '</h2>' + '<h2 class="recipe">' + this.recipe + '</h2>' + '<p>' + this.feedLikes + '</p>' + '<br> <br>');
 
             }
         }
@@ -45,12 +45,12 @@
         let imgs = ['<img src="meal1.jpeg">', '<img src="meal2.jpeg">', '<img src="meal3.jpeg">', '<img src="meal4.jpeg">', '<img src="meal5.jpeg">'];
         let diets = ['Vegetarian', 'Vegetarian', 'Omnivore', 'Omnivore', 'Vegan'];
         let foods = ['Apple Pie', 'Sallad', 'Shakshouka', 'Focaccia', 'Lebanese food'];
-        let recipes = ['later', 'later', 'later', 'later', 'later'];
+        let recipes = ['click for recipe'];
         let feedLikes = ['56', '87', '45', '16', '98'];
 
         window.addEventListener('load', (event) => {
             for (let i = 0; i < 5; i++) {
-                feed.push(new Meal(postnames[i], imgs[i], diets[i], foods[i], recipes[i], feedLikes[i]));
+                feed.push(new Meal(postnames[i], imgs[i], diets[i], foods[i], recipes, feedLikes[i]));
                 /* displays object properties in img tag with variable */
             }
             writeMoreInFeed()

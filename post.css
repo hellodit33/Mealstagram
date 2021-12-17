@@ -107,6 +107,7 @@ label.label input[type="file"] {
   #post {
       display: flex;
       flex-direction: column;
+      
     color: black;
     font-weight:0;
 letter-spacing: 3px;  
@@ -120,13 +121,30 @@ letter-spacing: 3px;
 border: solid 2px orange;
 background-color: orange;
 color: white;
-padding: 5px;
+padding: 9px;
+}
+
+#post h2:hover {
+    color: orange;
+    background-color: white;
 }
 
 #post h1 {
     font-size: 30px;
 
     color: orange;
+}
+
+#post .recipe {
+    background-color: #F4845F;
+}
+
+#post .food {
+    background-color: #F79D65; 
+}
+
+#post .diet {
+    background-color: #F7B267;
 }
 
 #post p {
