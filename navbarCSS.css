@@ -50,6 +50,7 @@
   box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  padding-left: 0;
 }
 
 .sub-links.container ul li {
