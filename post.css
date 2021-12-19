@@ -48,7 +48,17 @@
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+    font-size: 30px;
+}
 
+.post a {
+    text-decoration: none;
+    color: black
+}
+
+.post a:hover {
+    text-decoration: none;
+    color: black
 }
 
 #myImg {
@@ -109,7 +119,6 @@ label.label input[type="file"] {
       flex-direction: column;
       
     color: black;
-    font-weight:0;
 letter-spacing: 3px;  
 }
 
@@ -156,7 +165,7 @@ padding: 9px;
     display: grid;
     align-items: center;
     color: white;
-    letter-spacing: none;
+    letter-spacing: normal;
 }
   #post img {
       border-radius: 300px;

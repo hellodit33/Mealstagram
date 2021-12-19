@@ -21,11 +21,11 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-lg">
             <a class="navbar-brand" href="#"><img src="img/mealstagramIconWtext.png" alt="Mealstagram Icon"
-                    class="icon-landing-page" /></a>
+                    class="icon-landing-page" loading="lazy" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-img"><img id="img-toggler-icon" src="img/mealstagramMenuToggle-removebg.png"
-                        alt="" srcset="" /></span>
+                        alt="" loading="lazy" /></span>
             </button>
             <div class="brand-wrapper">
                 <a class="brand-name" href="landing.html">mealstagram</a>
@@ -60,59 +60,56 @@
 
 
 
-    <body>
-        <div class="center">
-            <span class="post">
-                <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post">
-                <h1>post</h1>
-            </span>
 
-            <form>
-                <label for="postname">Give a title to your meal:
-                    <input type="text" name="postname" id="postnameInput" required></label><br>
+    <div class="center">
+        <span class="post">
+            <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post" loading="lazy">
+            post
+        </span>
 
-                <label class="label">
-                    <input type="file" id="imageInput" required>
-                    <span>Upload your picture <img class="pluspost" src="img/plus.png"
-                            alt="a plus sign to add a meal post"></span></label>
-                <br>
+        <form>
+            <label for="postnameInput">Give a title to your meal:
+                <input type="text" name="postname" id="postnameInput" required></label><br>
 
-                <img id="myImg" src="#" alt="upload your image" style="display: none">
+            <label class="label" for="imageInput">
+                <input type="file" id="imageInput" required>
+                <span>Upload your picture <img class="pluspost" src="img/plus.png"
+                        alt="a plus sign to add a meal post"></span></label>
+            <br>
 
-
-                <label id="dietLabel" for="diet" class="dietfield">What diet do you
-                    have?
-                    <select id="dietInput" class="dietfield" required><br>
-                        <option></option>
-                    </select></label><br>
-                <br>
-
-                <label id="foodLabel" for="food" class="foodfield">What type of food is
-                    it?
-                    <select id="foodInput" class="foodfield" required><br>
-                        <option></option>
-                    </select></label><br>
-
-                <br>
-
-                <label for="recipe">Share your recipe or some advice: <br> <br>
-                    <textarea name="recipe" id="recipeInput" cols="30" rows="5"></textarea></label><br>
-
-                <label for="addpost" class="button" onclick="addImageToTheFeed();">
-                    <input type="button" id="btn">
-                    <span>post your meal</span>
-                </label>
-                <p id="output"></p>
-
-            </form>
-        </div>
+            <img id="myImg" src="#" alt="upload your image" style="display: none">
 
 
+            <label id="dietLabel" for="dietInput" class="dietfield">What diet do you
+                have?
+                <select id="dietInput" class="dietfield" required>
+                    <br>
+                    <option></option>
+                </select></label>
+            <br>
+            <br>
 
+            <label id="foodLabel" for="foodInput" class="foodfield">What type of food is
+                it?
+                <select id="foodInput" class="foodfield" required><br>
+                    <option></option>
+                </select></label>
+            <br>
 
-    </body>
+            <br>
 
-    <script type="text/javascript">
+            <label for="recipeInput">Share your recipe or some advice: <br> <br>
+                <textarea name="recipe" id="recipeInput" cols="30" rows="5"></textarea></label><br>
+
+            <label for="btn" class="button" onclick="addImageToTheFeed();">
+                <input type="button" id="btn" value="post your meal">
+                <span>post your meal</span>
+            </label>
+
+        </form>
+    </div>
+
+    <script>
 
 
 
@@ -143,5 +140,10 @@
         writeAllMeals();
 
     </script>
+
+
+</body>
+
+
 
 </html>
