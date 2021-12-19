@@ -44,6 +44,17 @@
     margin-right: 10px;
 }
 
+.post a {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.post a:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .post {
     display: flex;
     align-items: center;
@@ -57,7 +68,7 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
-    border: 15px solid #f9c74f;
+    border: 15px solid #F79D65;
     width: 400px;
     height: 400px;
     border-radius: 50%;

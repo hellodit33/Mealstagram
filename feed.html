@@ -42,7 +42,7 @@
         /* arrays for object properties */
         let feed = [];
         let postnames = ['Apple Pie with Cinnamon', 'Delicious summer sallad with my own tomatoes and cucumbers', 'A great shakshouka', 'A homebaked focaccia', 'Lebanese food on a Saturday evening'];
-        let imgs = ['<img src="meal1.jpeg">', '<img src="meal2.jpeg">', '<img src="meal3.jpeg">', '<img src="meal4.jpeg">', '<img src="meal5.jpeg">'];
+        let imgs = ['<img src="meal1.jpg" loading="lazy">', '<img src="meal2.jpg" loading="lazy">', '<img src="meal3.jpg" loading="lazy">', '<img src="meal4.jpg" loading="lazy">', '<img src="meal5.jpg" loading="lazy">'];
         let diets = ['Vegetarian', 'Vegetarian', 'Omnivore', 'Omnivore', 'Vegan'];
         let foods = ['Apple Pie', 'Sallad', 'Shakshouka', 'Focaccia', 'Lebanese food'];
         let recipes = ['click for recipe'];
@@ -94,11 +94,11 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-lg">
             <a class="navbar-brand" href="#"><img src="img/mealstagramIconWtext.png" alt="Mealstagram Icon"
-                    class="icon-landing-page" /></a>
+                    class="icon-landing-page" loading="lazy" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-img"><img id="img-toggler-icon" src="img/mealstagramMenuToggle-removebg.png"
-                        alt="" srcset="" /></span>
+                        alt="" srcset="" loading="lazy" /></span>
             </button>
             <div class="brand-wrapper">
                 <a class="brand-name" href="landing.html">mealstagram</a>
@@ -151,7 +151,12 @@
                 </script> -->
 
 
-
+                <span class="post">
+                    <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post" loading="lazy"><a
+                        href="post.html">
+                        <h3>click here to post a new picture</h3>
+                    </a>
+                </span>
 
 
             </div>
