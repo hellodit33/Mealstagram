@@ -219,6 +219,7 @@ button:hover {
   }
   
   .brand-name.text {
+    line-height: normal;
     font-size: 30px;
     font-weight: 800;
     background-image: linear-gradient(90deg, #688ffa 0%, #5B7EE0 100%);
