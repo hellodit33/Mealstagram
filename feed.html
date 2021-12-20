@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mealstagram</title>
+    <meta name="keywords"
+        content="rate food, recipes, vegetarian recipes, healthy lunch, cooking, cook christmas dinner">
+
+
+    <title>Mealstagram - Feed</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="landingStyle.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="post.css">
+    <link rel="stylesheet" href="synkcss.css" />
+
+
+
     <script>
         //skapar en klass meal
         class Meal {
             constructor(postname, img, diet, food, recipe, feedLikes) {
-                /*this.image = image;*/
                 this.postname = postname;
                 this.img = img;
                 this.diet = diet;
@@ -63,12 +68,6 @@
 
 
 
-        /* for loop to create objects 
-        for (let i = 0; i < 1; i++) {
-            feed.push(new Meal(postnames[i], imgs[i], diets[i], foods[i], recipes[i], feedLikes[i]));
- 
- 
-        }*/
 
         function writeMoreInFeed() {
 
@@ -88,45 +87,31 @@
 
 
     </script>
-    <meta name="keywords"
-        content="rate food, recipes, vegetarian recipes, healthy lunch, cooking, cook christmas dinner">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-lg">
-            <a class="navbar-brand" href="#"><img src="img/mealstagramIconWtext.png" alt="Mealstagram Icon"
-                    class="icon-landing-page" loading="lazy" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-img"><img id="img-toggler-icon" src="img/mealstagramMenuToggle-removebg.png"
-                        alt="" loading="lazy" /></span>
-            </button>
-            <div class="brand-wrapper">
-                <a class="brand-name" href="landing.html">mealstagram</a>
+    <nav>
+        <div class="nav-bar-container">
+            <div class="drop-down icon">
+                <img src="img/mealstagramMenuToggle-removebg.png" alt="" srcset="" />
+                <div class="sub-links container">
+                    <ul>
+                        <li><a href="create-profile.html">sign in</a></li>
+                        <li><a href="post.html">posts</a></li>
+                        <li><a href="feed.html">feed</a></li>
+                        <li><a href="profile.html">profile</a></li>
+                        <li><a href="#">settings</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse nav-link-container" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="feed.html">Feed</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            More
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="createprofile.html">Sign in</a></li>
-                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                            <li>
-                                <a class="dropdown-item" href="#">About</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="brand-name container">
+                <a href="landing.html">
+                    <p class="brand-name text">mealstagram</p>
+                </a>
+            </div>
+            <div class="message icon">
+                <img src="./img/msgIconNoBG.png" alt="" srcset="" />
             </div>
         </div>
     </nav>
@@ -136,6 +121,10 @@
 
 
     <div class="center">
+        <div class="post">
+            <img class="pluspost" src="img/feed.png" alt="a food symbol for the feed" loading="lazy">
+            <h1>feed</h1>
+        </div>
 
         <div id="post" class="post">
 
@@ -143,24 +132,52 @@
         </div>
 
 
-        <span class="post">
-            <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post" loading="lazy"><a
-                href="post.html">
-                click here to add a post</a>
-        </span>
-
 
 
 
     </div>
+    <div class="center">
+        <span class="post call_to_action">
+            <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post" loading="lazy"><a
+                href="post.html">
+                click here to add a post</a>
+        </span>
+    </div>
 
 
+
+    <div class="footer-nav">
+        <div class="content">
+            <img src="./img/feed.png" alt="feed icon" srcset="" />
+        </div>
+
+        <div class="content">
+            <img src="./img/plus.png" alt="post icon" srcset="" />
+        </div>
+        <div class="content">
+            <img src="./img/profile.png" alt="profile icon" srcset="" />
+        </div>
+        <div class="content">
+            <img src="./img/msgIconNoBG.png" alt="message icon" srcset="" />
+        </div>
+    </div>
 
 
 
     <script>
         writeMoreInFeed();
+
+        /* ------ navbar toggle dropdown ------- */
+        const toggleDropdown = document.querySelector(".sub-links.container");
+        console.log(toggleDropdown);
+        const menu = document.querySelector(".drop-down.icon");
+
+        menu.addEventListener("click", () => {
+            toggleDropdown.classList.toggle("show");
+        });
+
     </script>
+
 
 
 

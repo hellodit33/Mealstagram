@@ -2,54 +2,45 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mealstagram</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mealstagram - Homepage</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="landingStyle.css" />
-  <meta name="keywords" content="dinner recipe, vegan recipes, best breakfast, easy recipe, rate food, cook christmas dinner">
+  <link rel="stylesheet" href="synkcss.css">
+
+  <meta name="keywords"
+    content="dinner recipe, vegan recipes, best breakfast, easy recipe, rate food, cook christmas dinner">
+
+
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-lg">
-      <a class="navbar-brand" href="#"><img src="img/mealstagramIconWtext.png" alt="Mealstagram Icon" srcset=""
-          class="icon-landing-page" /></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-img"><img id="img-toggler-icon" src="img/mealstagramMenuToggle-removebg.png" alt=""
-            srcset="" /></span>
-      </button>
-      <div class="brand-wrapper">
-        <a class="brand-name" href="landing.html">mealstagram</a>
+  <nav>
+    <div class="nav-bar-container">
+      <div class="drop-down icon">
+        <img src="img/mealstagramMenuToggle-removebg.png" alt="" srcset="" />
+        <div class="sub-links container">
+          <ul>
+            <li><a href="create profile.html">sign in</a></li>
+            <li><a href="post.html">posts</a></li>
+            <li><a href="feed.html">feed</a></li>
+            <li><a href="profile.html">profile</a></li>
+            <li><a href="#">settings</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="collapse navbar-collapse nav-link-container" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="feed.html">Feed</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              More
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="createprofile.html">Sign in</a></li>
-              <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-              <li>
-                <a class="dropdown-item" href="#">About</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
+      <div class="brand-name container">
+        <a href="landing.html">
+          <p class="brand-name text">mealstagram</p>
+        </a>
+      </div>
+      <div class="message icon">
+        <img src="./img/msgIconNoBG.png" alt="" srcset="" />
       </div>
     </div>
   </nav>
@@ -80,15 +71,30 @@
 
   <div class="container-lg mid">
     <div class="sign-in wrapper">
-      <h3>Already a user? Sign in <a class="mid-link" href="#">here!</a></h3>
+      <h3>Already a user? Sign in <a class="mid-link" href="profile.html">here!</a></h3>
     </div>
     <div class="sign-up wrapper">
       <h3>
-        New to Mealstagram? Sign up <a class="mid-link" href="#">here!</a>
+        New to Mealstagram? Sign up <a class="mid-link" href="create profile.html">here!</a>
       </h3>
     </div>
   </div>
 
+  <div class="footer-nav">
+    <div class="content">
+      <img src="./img/feed.png" alt="feed icon" loading="lazy" />
+    </div>
+
+    <div class="content">
+      <img src="./img/plus.png" alt="post icon" loading="lazy" />
+    </div>
+    <div class="content">
+      <img src="./img/profile.png" alt="profile icon" loading="lazy" />
+    </div>
+    <div class="content">
+      <img src="./img/msgIconNoBG.png" alt="message icon" loading="lazy" />
+    </div>
+  </div>
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
