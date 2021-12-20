@@ -1,36 +1,150 @@
-/* sets font family for body */
-body {
-    font-family: "Quicksand", sans-serif;
+/* General CSS rules */
+
+* {
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-/* styling the img element */
-.profilePics {
-    border-radius: 50%;
-    border: 12px solid #EC9126;
-    box-sizing: border-box;
-    max-width: 200px;
+/* ----- Navbar ----- */
+.nav-bar-container {
+  border: 1px solid rgb(212, 212, 212);
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 62px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  z-index: 3;
 }
 
-/* displays img and h1 on same line */
-h1 {
-display: inline;
+/* dropdown */
+.drop-down.icon {
+  border-right: 1px solid rgb(212, 212, 212);
+  background-color: white;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+  flex: 1;
+}
+.drop-down.icon img {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* p tag styling */
-p {
-font-style: normal;
-font-weight: 300;
-font-size: 20px;
-line-height: 25px;
-color: #000000;
+.sub-links.container {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  transform: translateY(-150%);
+  transition: all 0.2s;
+  z-index: -1;
+}
+.sub-links.container ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-/* button styling */
-button {
-background-color: #EC9126;
-color: #FFFFFF;
-border: none;
-border-radius: 25px;
-padding: 10px 15px 10px 15px;
-margin: 6px;
+.sub-links.container ul li {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 70%;
+  text-align: center;
+}
+
+.sub-links.container ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+/* Adjusted <a> styling */
+.sub-links.container ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+}
+
+/* brand-name */
+.brand-name.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 200px;
+  flex: 3;
+}
+
+.brand-name.text {
+  font-size: 30px;
+  font-weight: 800;
+  background-image: linear-gradient(90deg, #f7b267 0%, #f25c54 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+/* message */
+.message.icon {
+  border-left: 1px solid rgb(212, 212, 212);
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  /* width: 60px; */
+  height: 60px;
+  cursor: pointer;
+  flex: 1;
+}
+.message.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ----- Footer Nav ----- */
+
+.footer-nav {
+  display: flex;
+  max-width: 400px;
+  width: 90%;
+  height: 60px;
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  transform: translateX(-50%);
+  padding: 10px 0;
+  box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.15);
+}
+
+.footer-nav .content {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+}
+
+.footer-nav .content:not(:last-child) {
+  border-right: 1px solid rgb(212, 212, 212);
+}
+
+.sub-links.container.show {
+  transform: translateY(0);
 }
