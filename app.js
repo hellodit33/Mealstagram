@@ -218,3 +218,15 @@ function like(bnum) {
         document.getElementById("wowButton").disabled = true;
     }
 }
+
+/* Removes object from array */
+
+function remove() {
+    profiles.pop();
+    console.log("Profile Deleted")
+    nameDisplay.innerHTML = "";
+    dietDisplay.innerHTML = "";
+    ageDisplay.innerHTML = "";
+    foodDisplay.innerHTML = "";
+    profilePics.src = "";
+}
