@@ -71,6 +71,25 @@ a:hover {
   text-decoration: none;
 }
 
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  grid-gap: 30px;
+}
+
+.info-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ec9126;
+  border-radius: 10px;
+  padding-top: 1rem;
+}
+
 /* ----- Navbar ----- */
 .nav-bar-container {
   border: 1px solid rgb(212, 212, 212);
@@ -113,7 +132,8 @@ a:hover {
   height: 250px;
   position: fixed;
   top: 65px;
-  transform: translateY(-150%);
+  left: 50%;
+  transform: translate(-50%, -150%);
   transition: all 0.2s;
   z-index: -1;
   overflow: normal;
@@ -121,8 +141,7 @@ a:hover {
 .sub-links.container ul {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 250px;
+  width: 100vw;
   box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -134,7 +153,7 @@ a:hover {
   display: block;
   margin: 0 auto;
   padding: 10px 0;
-  width: 70%;
+  width: 100%;
   text-align: center;
 }
 
@@ -160,7 +179,9 @@ a:hover {
 }
 
 .brand-name.text {
-  font-size: 30px;
+  /* font-size: 30px; */
+  /* font-size: clamp(20px, 30px, 40px); */
+  font-size: calc(1.375rem + 1.5vw);
   font-weight: 800;
   background-image: linear-gradient(90deg, #f7b267 0%, #f25c54 100%);
   color: transparent;
@@ -223,7 +244,7 @@ a:hover {
 }
 
 .sub-links.container.show {
-  transform: translateY(0);
+  transform: translate(-50%, 0%);
 }
 
 /* ----- Landing ----- */
@@ -259,11 +280,6 @@ a:hover {
 }
 
 @media screen and (max-width: 420px) {
-  .brand-name {
-    left: unset;
-    right: 50px;
-    transform: translate(0, -50%);
-  }
   .brand-wrapper .brand-name {
     font-size: 1.6rem;
   }
@@ -355,6 +371,13 @@ a:hover {
 .margin {
   margin-bottom: 100px;
 }
+
+/* label centering + flex-direction set to column */
+.post-form label {
+  display: flex;
+  flex-direction: column;
+}
+
 /* center input on forms with class label*/
 
 .label {
