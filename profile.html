@@ -26,7 +26,7 @@
                 <div class="sub-links container">
                     <ul>
                         <li><a href="create-profile.html">sign in</a></li>
-                        <li><a href="post.html">posts</a></li>
+                        <li><a href="post.html">post</a></li>
                         <li><a href="feed.html">feed</a></li>
                         <li><a href="profile.html">profile</a></li>
                         <li><a href="#">settings</a></li>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="brand-name container">
-                <a href="landing.html">
+                <a href="index.html">
                     <p class="brand-name text">mealstagram</p>
                 </a>
             </div>
@@ -45,71 +45,46 @@
     </nav>
     <!-- responsive row -->
     <div class="row">
+        <div class="text-center">
+            <img class="pluspost" src="img/profile.png" id="profile" alt="Profile icon" loading="lazy">
+            <h1>my profile</h1>
+        </div>
         <!-- responsive column -->
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">
-            <!-- text center align -->
-            <div class="text-center">
-                <img class="pluspost" src="img/profile.png" id="profile" alt="Profile icon" loading="lazy">
-                <h1>my profile</h1>
-            </div>
-        </div>
     </div>
-    <div class="col-sm-4"></div>
     <br>
     <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-sm-4">
-            <div class="text-center">
-                <!-- img id that displays img src from javscript object -->
-                <img id="profilePics" src="placeholder" class="profilePics" alt="Profile pic" loading="lazy">
-            </div>
+        <div class="text-center">
+            <!-- img id that displays img src from javscript object -->
+            <img id="profilePics" src="placeholder" class="profilePics" alt="Profile pic" loading="lazy">
         </div>
-        <div class="col-sm-4"></div>
     </div>
     <br>
     <br>
     <br>
-    <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-2">
-            <div class="div-centered">
-                <p><b>Name:</b></p>
-                <!-- p id that displays object properties -->
-                <p id="nameDisplay"></p>
-            </div>
+    <div class="info-grid">
+        <div>
+            <p><b>Name:</b></p>
+            <!-- p id that displays object properties -->
+            <p id="nameDisplay"></p>
         </div>
-        <div class="col-sm-2">
-            <div class="div-centered">
-                <p><b>Diet:</b></p>
-                <!-- p id that displays object properties -->
-                <p id="dietDisplay"></p>
-            </div>
+
+        <div>
+            <p><b>Diet:</b></p>
+            <!-- p id that displays object properties -->
+            <p id="dietDisplay"></p>
         </div>
-        <div class="col-sm-4"></div>
+        <div>
+            <p><b>Age:</b></p>
+            <!-- p id that displays object properties -->
+            <p id="ageDisplay"></p>
+        </div>
+        <div>
+            <p><b>Favourite Food:</b></p>
+            <!-- p id that displays object properties -->
+            <p id="foodDisplay"></p>
+        </div>
     </div>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-2">
-            <div class="div-centered">
-                <p><b>Age:</b></p>
-                <!-- p id that displays object properties -->
-                <p id="ageDisplay"></p>
-            </div>
-        </div>
-        <div class="col-sm-2">
-            <div class="div-centered">
-                <p><b>Favourite Food:</b></p>
-                <!-- p id that displays object properties -->
-                <p id="foodDisplay"></p>
-            </div>
-        </div>
-        <div class="col-sm-4"></div>
-    </div>
-    <br>
-    <br>
+
     <div class="row">
         <div class="col-sm-3">
         </div>
@@ -117,11 +92,14 @@
             <!-- buttons to other html pages -->
             <div class="text-center">
                 <button>new dish</button>
-                <button>add friend</button>
-                <button>friend's likes</button>
+                <button>add a friend</button>
+                <button>friends' likes</button>
                 <button>my likes</button><br>
+                <br>
+                <br>
                 <!-- function to change stylesheet with button -->
-                <button onclick="toggleTheme()">color</button>
+                <button onclick="toggleTheme()">change color mode</button>
+                <button onclick="remove()">remove your profile</button>
                 <br><br><br><br><br>
             </div>
         </div>
@@ -129,18 +107,18 @@
     <div class="col-sm-3"></div>
     <div class="footer-nav">
         <div class="content">
-            <img src="./img/feed.png" alt="feed icon" loading="lazy" />
-        </div>
-
-        <div class="content">
-            <img src="./img/plus.png" alt="post icon" loading="lazy" />
+            <a href="feed.html"><img src="./img/feed.png" loading="lazy" alt="feed" /></a>
         </div>
         <div class="content">
-            <img src="./img/profile.png" alt="profile icon" loading="lazy" />
+            <a href="post.html"><img src="./img/plus.png" loading="lazy" alt="post" /></a>
         </div>
         <div class="content">
-            <img src="./img/msgIconNoBG.png" alt="message icon" loading="lazy" />
+            <a href="profile.html"><img src="./img/profile.png" loading="lazy" alt="profile" /></a>
         </div>
+        <div class="content">
+            <a href="#"><img src="./img/msgIconNoBG.png" loading="lazy" alt="message" /></a>
+        </div>
+    </div>
     </div>
     <script src="app.js"></script>
 

@@ -29,17 +29,11 @@ class Meal {
 
     }
 
-
-
-
-
 }
 
 //create the array meal to store all the meal objects in it 
 
 let meal = [];
-
-
 
 
 
@@ -53,37 +47,16 @@ function addImageToTheFeed() {
     //push the info in an object literal for each meal
     meal.push(new Meal(postname, img, diet, food, recipe));
 
-
-
-
-}
-
-/*skriva ut infon om måltiden
-
-function writeAllMeals() {
-    let postname = document.getElementById('postnameInput').value;
-
-    let img = document.getElementById('imageInput').value;
-    let diet = document.getElementById("dietInput").value;
-    let food = document.getElementById("foodInput").value;
-    let recipe = document.getElementById("recipeInput").value;
-
-
-
-
-    document.getElementById("output").innerHTML = "";
-
-
-
-
-    for (let i = 0; i < meal.length; i++) {
-        document.getElementById("output").innerHTML += meal[i].toString() + "<br>";
-    }
-
+    document.getElementById('postnameInput').value = '';
+    document.getElementById('imageInput').value = '';
+    document.getElementById('dietInput').value = '';
+    document.getElementById('foodInput').value = '';
+    document.getElementById('recipeInput').value = '';
 
 
 }
-*/
+
+
 
 /* ------ navbar toggle dropdown ------- */
 const toggleDropdown = document.querySelector(".sub-links.container");
@@ -197,24 +170,16 @@ function toggleTheme() {
 }
 
 
-/* -------- feed ------- */
-// like button function
 
-function like(bnum) {
-    if (bnum == 1) {
-        var like = document.getElementById("niceLike").innerHTML
-        like++
-        document.getElementById("niceLike").innerHTML = like
-        document.getElementById("niceButton").disabled = true;
-    } else if (bnum == 2) {
-        var like2 = document.getElementById("tastyLike").innerHTML
-        like2++
-        document.getElementById("tastyLike").innerHTML = like2
-        document.getElementById("tastyButton").disabled = true;
-    } else if (bnum == 3) {
-        var like3 = document.getElementById("wowLike").innerHTML
-        like3++
-        document.getElementById("wowLike").innerHTML = like3
-        document.getElementById("wowButton").disabled = true;
-    }
+
+/* Removes object from array on profile */
+
+function remove() {
+    profiles.pop();
+    console.log("Profile Deleted")
+    nameDisplay.innerHTML = "";
+    dietDisplay.innerHTML = "";
+    ageDisplay.innerHTML = "";
+    foodDisplay.innerHTML = "";
+    profilePics.src = "";
 }

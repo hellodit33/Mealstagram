@@ -1,461 +1,476 @@
 /* ----- General CSS rules ----- */
 
 * {
-    font-family: "Quicksand", sans-serif;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  font-family: "Quicksand", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
-   /* Hides the scrollbar */
-   ::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-  }
+/* Hides the scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
 
-  /* displays img and h1 on same line */
+/* displays img and h1 on same line */
 h1 {
-    display: inline;
-    }
-    
-  
-    /* p tag styling */
-    p {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 25px;
-    color: #000000;
-    }
-    
-    /* styling for button, overridden so that the stylesheet switch function works, otherwise it acts on the bootstrap stylesheet and won't work */
-  button {
-    cursor: pointer !important;
-    border: 3px solid #f9c74f !important;
-    background-color: orange !important;
-    color: white !important;
-    border-radius: 30px !important;
-    margin: 5px 5px !important;
-    padding: 10px 10px !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
-  
-  /* styling for button hover, overridden so that the stylesheet switch function works, otherwise it acts on the bootstrap stylesheet and won't work */
-  button:hover {
-    cursor: pointer !important;
-    border: 3px solid orange !important;
-    background-color: white !important;
-    color: black !important;
-    border-radius: 30px !important;
-    margin: 5px 5px !important;
-    padding: 10px 10px;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center !important;
-  }
+  display: inline;
+}
 
-     /* styling for a centering div */
-  .div-centered {
-    text-align: center;
-    margin: auto;
-    width: 200px;
-  }
+/* p tag styling */
+p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
+  color: #000000;
+}
 
-  .brand-name a {
-      text-decoration: none;
-      cursor: pointer;
-  }
+/* styling for button, overridden so that the stylesheet switch function works, otherwise it acts on the bootstrap stylesheet and won't work */
+button {
+  cursor: pointer !important;
+  border: 3px solid #f9c74f !important;
+  background-color: orange !important;
+  color: white !important;
+  border-radius: 30px !important;
+  margin: 5px 5px !important;
+  padding: 10px 10px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
 
-  a:hover {
-      text-decoration: none;
-  }
-    
+/* styling for button hover, overridden so that the stylesheet switch function works, otherwise it acts on the bootstrap stylesheet and won't work */
+button:hover {
+  cursor: pointer !important;
+  border: 3px solid orange !important;
+  background-color: white !important;
+  color: black !important;
+  border-radius: 30px !important;
+  margin: 5px 5px !important;
+  padding: 10px 10px;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* styling for a centering div */
+.div-centered {
+  text-align: center;
+  margin: auto;
+  width: 200px;
+}
+
+.brand-name a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 
 /* ----- Navbar ----- */
 .nav-bar-container {
-    border: 1px solid rgb(212, 212, 212);
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 62px;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    position: relative;
-    z-index: 3;
-  }
+  border: 1px solid rgb(212, 212, 212);
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 62px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  z-index: 3;
+}
 
+/* dropdown */
+.drop-down.icon {
+  border-right: 1px solid rgb(212, 212, 212);
+  background-color: white;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+  flex: 1;
+}
+.drop-down.icon img {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-  
-  /* dropdown */
-  .drop-down.icon {
-    border-right: 1px solid rgb(212, 212, 212);
-    background-color: white;
-    display: flex;
-    width: 100%;
-    height: 60px;
-    cursor: pointer;
-    position: relative;
-    z-index: 99;
-    flex: 1;
-  }
-  .drop-down.icon img {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  .sub-links.container {
-    display: flex;
-    width: 100%;
-    height: 250px;
-    position: fixed;
-    top: 65px;
-    transform: translateY(-150%);
-    transition: all 0.2s;
-    z-index: -1;
-    overflow: normal;
-  }
-  .sub-links.container ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 250px;
-    box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding: 0;
-    background-color: white;
-  }
-  
-  .sub-links.container ul li {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 0;
-    width: 70%;
-    text-align: center;
-  }
-  
-  .sub-links.container ul li:not(:last-child) {
-    border-bottom: 1px solid rgb(212, 212, 212);
-  }
-  
-  /* Adjusted <a> styling */
-  .sub-links.container ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 800;
-  }
-  
-  /* brand-name */
-  .brand-name.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 200px;
-    flex: 3;
-  }
-  
-  .brand-name.text {
-    font-size: 30px;
-    font-weight: 800;
-    background-image: linear-gradient(90deg, #f7b267 0%, #f25c54 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    line-height: normal;
-  }
-  
-  /* message */
-  .message.icon {
-    border-left: 1px solid rgb(212, 212, 212);
-    display: flex;
-    /* display: none; */
-    justify-content: center;
-    align-items: center;
-    /* width: 60px; */
-    height: 60px;
-    cursor: pointer;
-    flex: 1;
-  }
-  .message.icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  /* ----- Footer Nav ----- */
-  
-  .footer-nav {
-    display: flex;
-    max-width: 400px;
-    width: 90%;
-    height: 60px;
-    position: fixed;
-    left: 50%;
-    bottom: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: white;
-    transform: translateX(-50%);
-    padding: 10px 0;
-    box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.15);
-  }
-  
-  .footer-nav .content {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    cursor: pointer;
-    width: 35px;
-    height: 35px;
-  }
-  
-  .footer-nav .content:not(:last-child) {
-    border-right: 1px solid rgb(212, 212, 212);
-  }
-  
-  .sub-links.container.show {
-    transform: translateY(0);
-  }
+.sub-links.container {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  transition: all 0.2s;
+  z-index: -1;
+  overflow: normal;
+}
+.sub-links.container ul {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0;
+  background-color: white;
+}
 
+.sub-links.container ul li {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
 
-  /* ----- Landing ----- */
+.sub-links.container ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+/* Adjusted <a> styling */
+.sub-links.container ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+}
+
+/* brand-name */
+.brand-name.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 200px;
+  flex: 3;
+}
+
+.brand-name.text {
+  /* font-size: 30px; */
+  /* font-size: clamp(20px, 30px, 40px); */
+  font-size: calc(1.375rem + 1.5vw);
+  font-weight: 800;
+  background-image: linear-gradient(90deg, #f7b267 0%, #f25c54 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  line-height: normal;
+}
+
+/* message */
+.message.icon {
+  border-left: 1px solid rgb(212, 212, 212);
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  /* width: 60px; */
+  height: 60px;
+  cursor: pointer;
+  flex: 1;
+}
+.message.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ----- Footer Nav ----- */
+
+.footer-nav {
+  display: flex;
+  max-width: 400px;
+  width: 90%;
+  height: 60px;
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  transform: translateX(-50%);
+  padding: 10px 0;
+  box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.15);
+}
+
+.footer-nav .content {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+.footer-nav .content a img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-nav .content:not(:last-child) {
+  border-right: 1px solid rgb(212, 212, 212);
+}
+
+.sub-links.container.show {
+  transform: translate(-50%, 0%);
+}
+
+/* ----- Landing ----- */
 
 /* Aligned text to center for better visuals */
 .nav-link-container {
-    text-align: center;
-  }
-  
-  /* Styled icon size */
-  .container-lg > a > img {
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-  }
-  
-  .navbar .container-lg a {
-    font-size: 1.4rem;
-  }
-  
-  /* Menu-toggle icon size */
-  #img-toggler-icon {
-    display: inline-block;
-    width: 70px;
-    height: 70px;
-  }
-  
-  /* Removed border from navbar-toggler */
-  .navbar-toggler {
-    border: none;
-    position: relative;
-    z-index: 3;
-  }
-  
- 
-  
-  @media screen and (max-width: 420px) {
-    .brand-name {
-      left: unset;
-      right: 50px;
-      transform: translate(0, -50%);
-    }
-    .brand-wrapper .brand-name {
-      font-size: 1.6rem;
-    }
-  }
-  
-  @media screen and (max-width: 320px) {
-    .brand-name {
-      right: 25px;
-    }
-  }
-  /* Navbar end */
-  
-  /* Hero-section */
-  .hero-section {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .hero-section .hero-container img {
-    display: inline-block;
-    width: 100%;
-  }
-  
-  /* main section */
+  text-align: center;
+}
 
-  
-  .main h2,
-  .main p {
-    padding: 10px 20px;
-    text-align: center;
-  }
-  
-  /* Mid section, this is before footer */
-  .container-lg.mid {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-  }
-  
-  .container-lg.mid .mid-link {
-    font-size: 1.7rem;
-    text-decoration: none;
-    color: black;
-    transition: ease-in-out 300ms;
-  }
-  
-  .container-lg.mid .mid-link:hover {
-    background-color: #F7B267;
-    border-radius: 5px;
-    padding: 3px 4px;
-  }
-  
-  .container-lg.mid h3 {
-    padding: 10px 0 10px 0;
-  }
+/* Styled icon size */
+.container-lg > a > img {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+}
 
-  .sign-up {
-      margin-bottom: 100px;
+.navbar .container-lg a {
+  font-size: 1.4rem;
+}
+
+/* Menu-toggle icon size */
+#img-toggler-icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+}
+
+/* Removed border from navbar-toggler */
+.navbar-toggler {
+  border: none;
+  position: relative;
+  z-index: 3;
+}
+
+@media screen and (max-width: 420px) {
+  .brand-wrapper .brand-name {
+    font-size: 1.6rem;
   }
-/* ----- Profile ----- */ 
+}
+
+@media screen and (max-width: 320px) {
+  .brand-name {
+    right: 25px;
+  }
+}
+/* Navbar end */
+
+/* Hero-section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-section .hero-container img {
+  display: inline-block;
+  width: 100%;
+}
+
+/* main section */
+
+.main h2,
+.main p {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Mid section, this is before footer */
+.container-lg.mid {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+}
+
+.container-lg.mid .mid-link {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: black;
+  transition: ease-in-out 300ms;
+}
+
+.container-lg.mid .mid-link:hover {
+  background-color: #f7b267;
+  border-radius: 5px;
+  padding: 3px 4px;
+}
+
+.container-lg.mid h3 {
+  padding: 10px 0 10px 0;
+}
+
+.sign-up {
+  margin-bottom: 100px;
+}
+
+
+/* ----- Profile ----- */
 
 /* styling the img element */
 .profilePics {
-    border-radius: 50%;
-    border: 12px solid #EC9126;
-    box-sizing: border-box;
-    max-width: 200px;
+  border-radius: 50%;
+  border: 12px solid #ec9126;
+  box-sizing: border-box;
+  max-width: 200px;
 }
 
 /* style title for sign in page */
 .text-center {
-    margin: 15px 15px 15px 15px;
-padding: 15px 15px 15px 15px;
+  margin: 15px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  grid-gap: 30px;
+}
+
+.info-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ec9126;
+  border-radius: 10px;
+  padding-top: 1rem;
 }
 
 /* ----- Post and Profile Pages ----- */
 
 /* center elements */
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    margin: 15px 15px 15px 15px;
-    padding: 15px 15px 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 15px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
 }
 
 .margin {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
+
+/* label centering + flex-direction set to column */
+.post-form label {
+  display: flex;
+  flex-direction: column;
+}
+
 /* center input on forms with class label*/
 
 .label {
-    cursor: pointer;
-    border: 3px solid orange;
-    border-radius: 30px;
-    margin: 10px 10px;
-    padding: 10px 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;  
+  cursor: pointer;
+  border: 3px solid orange;
+  border-radius: 30px;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-  /* label hover styling */
-
+/* label hover styling */
 
 .label:hover {
-    background-color: orange;
-    color: white;   
+  background-color: orange;
+  color: white;
 }
 
+/* label positioning file input */
 
-  /* label positioning file input */
+label.label input[type="file"] {
+  position: absolute;
+  top: -1000px;
+}
 
-  label.label input[type="file"] {
-    position: absolute;
-    top: -1000px;
-  }
-
-  /* styling for plus add */
+/* styling for plus add */
 
 .pluspost {
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .post {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 /* ----- Feed Page ----- */
 
-
-  #post {
-    display: flex;
-    flex-direction: column;
+#post {
+  display: flex;
+  flex-direction: column;
   color: black;
-letter-spacing: 3px;  
+  letter-spacing: 3px;
 }
 
 #post h1 {
-    font-size: 30px;
-  
-    color: orange;
-  }
+  font-size: 30px;
 
+  color: orange;
+}
 
 #post h2 {
   letter-spacing: 3px;
   font-size: 20px;
   border-radius: 20px;
-border: solid 2px orange;
-background-color: orange;
-color: white;
-padding: 9px;
+  border: solid 2px orange;
+  background-color: orange;
+  color: white;
+  padding: 9px;
 }
-
-
 
 #post h2:hover {
   color: orange;
   background-color: white;
 }
 
-
 #post .recipe {
-  background-color: #F4845F;
+  background-color: #f4845f;
 }
 
 #post .food {
-  background-color: #F79D65; 
+  background-color: #f79d65;
 }
 
 #post .diet {
-  background-color: #F7B267;
+  background-color: #f7b267;
 }
-
 
 #post p {
   background-image: url(img/like.png);
   background-size: contain;
   width: 50px;
   height: 50px;
-  font-size:20px;
+  font-size: 20px;
   display: grid;
   align-items: center;
   color: white;
@@ -463,279 +478,257 @@ padding: 9px;
 }
 
 #post img {
-    border-radius: 300px;
-    width: 400px;
-    height: 400px;
+  border-radius: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 .call_to_action {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
-
 .call_to_action a {
-   text-decoration: none;
-   color: black;
-   font-size: 20px;
-       padding: 9px;
-
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  padding: 9px;
 }
 
 .call_to_action a:hover {
-    background-color: orange;
-    color: white;
-    border-radius: 30px;
-    padding: 9px;
- }
+  background-color: orange;
+  color: white;
+  border-radius: 30px;
+  padding: 9px;
+}
 
 /* upload image on post */
 
-  /* styling of img input */
+/* styling of img input */
 
 #imageInput {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    margin: 15px 15px 15px 15px;
-    padding: 15px 15px 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 15px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
 }
-  /* styling of img input */
+/* styling of img input */
 
 #myImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    border: 15px solid #F79D65;
-    width: 400px;
-    height: 400px;
-    border-radius: 50%;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border: 15px solid #f79d65;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+
   align-self: center;
-margin-top: 10px;
-margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* button on Post page */
 
 .button {
-    cursor: pointer;
-    border: 3px solid #f9c74f;
-    background-color: orange;
-    color: white;
-    border-radius: 30px;
-    margin: 10px 10px;
-    padding: 10px 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;    
+  cursor: pointer;
+  border: 3px solid #f9c74f;
+  background-color: orange;
+  color: white;
+  border-radius: 30px;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
 
 .button:hover {
-    cursor: pointer;
-    border: 3px solid orange;
-    background-color: white;
-    color: black;
-    border-radius: 30px;
-    margin: 10px 10px;
-    padding: 10px 10px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;    
+  cursor: pointer;
+  border: 3px solid orange;
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-  /* label positioning button input */
-  label.button input[type="button"] {
-    position: absolute !important;
-    top: -1000px !important;
-  }
+/* label positioning button input */
+label.button input[type="button"] {
+  position: absolute !important;
+  top: -1000px !important;
+}
+
+/* ----- Like button on Feed -----*/
+
+/* colors for button */
+/* the thumbs up emoji button */
+
+.likes {
+  margin-bottom: 40px;
+}
+
+.nice {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  width: 90px;
+  height: 40px;
+  background: white;
+  border: 0;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 6px;
+  outline: none;
+  /*the thumbs up emoji like box*/
+}
+
+.nice:hover {
+  color: #cc8400;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.nice:active {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.feelings {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background:#F79D65;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  border-radius: 100px;
+  border: solid 2px #F27059;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.feelings:after {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #F79D65;
+}
+
+/* the tasty emoji button */
+.tasty {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  width: 90px;
+  height: 40px;
+  background: white;
+  border: 0;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 6px;
+  outline: none;
+  /*the tasty emoji like box*/
+}
+
+.tasty:hover {
+  color: #F27059;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.tasty:active {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.tasty .tastyLike {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #cc8400;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  border-radius: 100px;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
  
 
-  /* ----- Like button on Feed -----*/
+.wow {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  width: 90px;
+  height: 40px;
+  background: white;
+  border: 0;
+  font-size: 0.9rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 6px;
+  outline: none;
+  /*the wow emoji like box*/
+}
 
-  /* colors for button */
-/* the thumbs up emoji button */
-.nice {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 10px;
-    width: 90px;
-    height: 40px;
-    background: white;
-    border: 0;
-    font-size: .9rem;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    border-radius: 6px;
-    outline: none;
-    /*the thumbs up emoji like box*/
-  }
-  
-  .nice:hover {
-    color: #cc8400;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  
-  .nice:active {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
-  }
-  
-  .nice .niceLike {
-    position: absolute;
-    top: 55px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: #cc8400;
-    color: rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
-    border-radius: 100px;
-    opacity: 1;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-  }
-  
-  .nice .niceLike:after {
-    position: absolute;
-    top: -7px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #cc8400;
-  }
-  
-  /* the tasty emoji button */
-  .tasty {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 10px;
-    width: 90px;
-    height: 40px;
-    background: white;
-    border: 0;
-    font-size: .9rem;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    border-radius: 6px;
-    outline: none;
-    /*the tasty emoji like box*/
-  }
-  
-  .tasty:hover {
-    color: #cc8400;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  
-  .tasty:active {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
-  }
-  
-  .tasty .tastyLike {
-    position: absolute;
-    top: 55px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: #cc8400;
-    color: rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
-    border-radius: 100px;
-    opacity: 1;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-  }
-  
-  .tasty .tastyLike:after {
-    position: absolute;
-    top: -7px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #cc8400;
-  }
-  
-  .wow {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 10px;
-    width: 90px;
-    height: 40px;
-    background: white;
-    border: 0;
-    font-size: .9rem;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    border-radius: 6px;
-    outline: none;
-    /*the wow emoji like box*/
-  }
-  
-  .wow:hover {
-    color: #cc8400;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-  }
-  
-  .wow:active {
-    -webkit-transform: scale(1.4);
-            transform: scale(1.4);
-  }
-  
-  .wow .wowLike {
-    position: absolute;
-    top: 55px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: #cc8400;
-    color: rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
-    border-radius: 100px;
-    opacity: 1;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-  }
-  
-  .wow .wowLike:after {
-    position: absolute;
-    top: -7px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #cc8400;
-  }
+.wow:hover {
+  color: #cc8400;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.wow:active {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+}
+
+.wow .wowLike {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #cc8400;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  border-radius: 100px;
+  opacity: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+
