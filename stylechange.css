@@ -31,13 +31,23 @@ h1 {
 display: inline;
 }
 
-.brand-name a {
-  text-decoration: none;
-  cursor: pointer;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  grid-gap: 30px;
 }
 
-a:hover {
-  text-decoration: none;
+.info-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #5B7EE0;
+  border-radius: 10px;
+  padding-top: 1rem;
 }
 
 /* styling for a centering div */
@@ -52,7 +62,7 @@ a:hover {
   border-radius: 50%;
   border: 12px solid #5B7EE0;
   box-sizing: border-box;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 /* styling of img input */
@@ -103,7 +113,7 @@ text-align: center;
 
 /* label positioning button input */
 label.button input[type="button"] {
-  position: absolute !important;
+  position:  !important;
   top: -1000px !important;
 }
 
@@ -226,12 +236,14 @@ button:hover {
   }
   
   .brand-name.text {
-    line-height: normal;
-    font-size: 30px;
+    /* font-size: 30px; */
+    /* font-size: clamp(20px, 30px, 40px); */
+    font-size: calc(1.375rem + 1.5vw);
     font-weight: 800;
     background-image: linear-gradient(90deg, #688ffa 0%, #5B7EE0 100%);
     color: transparent;
     -webkit-background-clip: text;
+    line-height: normal;
   }
   
   /* message */
@@ -284,3 +296,4 @@ button:hover {
   .sub-links.container.show {
     transform: translateY(0);
   }
+  
