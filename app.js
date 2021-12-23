@@ -53,7 +53,11 @@ function addImageToTheFeed() {
     //push the info in an object literal for each meal
     meal.push(new Meal(postname, img, diet, food, recipe));
 
-
+    document.getElementById('postnameInput').value = '';
+    document.getElementById('imageInput').value = '';
+    document.getElementById('dietInput').value = '';
+    document.getElementById('foodInput').value = '';
+    document.getElementById('recipeInput').value = '';
 
 
 }
@@ -196,6 +200,17 @@ function toggleTheme() {
     }
 }
 
+/* Removes object from array on profile */
+
+function remove() {
+    profiles.pop();
+    console.log("Profile Deleted")
+    nameDisplay.innerHTML = "";
+    dietDisplay.innerHTML = "";
+    ageDisplay.innerHTML = "";
+    foodDisplay.innerHTML = "";
+    profilePics.src = "";
+}
 
 /* -------- feed ------- */
 // like button function
