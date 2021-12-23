@@ -52,7 +52,7 @@ a:hover {
   border-radius: 50%;
   border: 12px solid #5B7EE0;
   box-sizing: border-box;
-  max-width: 300px;
+  max-width: 200px;
 }
 
 /* styling of img input */
@@ -86,7 +86,7 @@ margin-bottom: 35px;
 /* label styling */
 .label {
 cursor: pointer;
-border: 3px solid orange;
+border: 3px solid #688ffa;
 border-radius: 30px;
 margin: 10px 10px;
 padding: 10px 10px;
@@ -97,7 +97,7 @@ text-align: center;
 
 /* label hover styling */
 .label:hover {
-  background-color: orange;
+  background-color: #688ffa;
   color: white;   
 }
 
@@ -142,71 +142,78 @@ button:hover {
 }
 
 
-  /* ----- Navbar ----- */
-  .nav-bar-container {
-    border: 1px solid rgb(212, 212, 212);
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 62px;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    position: relative;
-    z-index: 3;
-  }
-  
-  /* dropdown */
-  .drop-down.icon {
-    border-right: 1px solid rgb(212, 212, 212);
-    background-color: white;
-    display: flex;
-    width: 100%;
-    height: 60px;
-    cursor: pointer;
-    position: relative;
-    z-index: 99;
-    flex: 1;
-  }
-  .drop-down.icon img {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  .sub-links.container {
-    display: flex;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    transform: translateY(-150%);
-    transition: all 0.2s;
-    z-index: -1;
-  }
-  .sub-links.container ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-  
-  .sub-links.container ul li {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 0;
-    width: 70%;
-    text-align: center;
-  }
-  
-  .sub-links.container ul li:not(:last-child) {
-    border-bottom: 1px solid rgb(212, 212, 212);
-  }
+/* ----- Navbar ----- */
+.nav-bar-container {
+  border: 1px solid rgb(212, 212, 212);
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 62px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  z-index: 3;
+}
+
+/* dropdown */
+.drop-down.icon {
+  border-right: 1px solid rgb(212, 212, 212);
+  background-color: white;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+  flex: 1;
+}
+.drop-down.icon img {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sub-links.container {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  position: fixed;
+  top: 65px;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  transition: all 0.2s;
+  z-index: -1;
+  overflow: normal;
+}
+.sub-links.container ul {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0;
+  background-color: white;
+}
+
+.sub-links.container ul li {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sub-links.container ul li:not(:last-child) {
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+
   
   /* Adjusted <a> styling */
   .sub-links.container ul li a {
@@ -225,9 +232,10 @@ button:hover {
     flex: 3;
   }
   
+  
   .brand-name.text {
     line-height: normal;
-    font-size: 30px;
+    font-size: calc(1.375rem + 1.5vw);
     font-weight: 800;
     background-image: linear-gradient(90deg, #688ffa 0%, #5B7EE0 100%);
     color: transparent;
@@ -252,35 +260,70 @@ button:hover {
     object-fit: contain;
   }
   
-  /* ----- Footer Nav ----- */
-  
-  .footer-nav {
-    display: flex;
-    max-width: 400px;
-    width: 90%;
-    height: 60px;
-    position: fixed;
-    left: 50%;
-    bottom: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    background-color: white;
-    transform: translateX(-50%);
-    padding: 10px 0;
-    box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.15);
+/* ----- Footer Nav ----- */
+
+.footer-nav {
+  display: flex;
+  max-width: 400px;
+  width: 90%;
+  height: 60px;
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  transform: translateX(-50%);
+  padding: 10px 0;
+  box-shadow: 1px 3px 34px -3px rgba(0, 0, 0, 0.15);
+}
+
+.footer-nav .content {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+.footer-nav .content a img {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-nav .content:not(:last-child) {
+  border-right: 1px solid rgb(212, 212, 212);
+}
+
+.sub-links.container.show {
+  transform: translate(-50%, 0%);
+}
+
+/* ----- Profile ----- */
+
+/* style title for sign in page */
+.text-center {
+  margin: 15px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
+}
+
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    grid-gap: 30px;
   }
   
-  .footer-nav .content {
+  .info-grid div {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    flex: 1;
-    cursor: pointer;
-  }
-  
-  .footer-nav .content:not(:last-child) {
-    border-right: 1px solid rgb(212, 212, 212);
-  }
-  
-  .sub-links.container.show {
-    transform: translateY(0);
+    border: 2px solid #688ffa;
+    border-radius: 10px;
+    padding-top: 1rem;
   }

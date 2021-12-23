@@ -2,26 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords"
-        content="rate food, recipes, vegetarian recipes, healthy lunch, cooking, cook christmas dinner">
-
+        content="rate food, recipes, vegetarian recipes, healthy lunch, cooking, cook christmas dinner" />
 
     <title>Mealstagram - Feed</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="synkcss.css" />
 
-
-
     <script>
-        //skapar en klass meal
+        //create a meal class
         class Meal {
             constructor(postname, img, diet, food, recipe, feedLikes) {
                 this.postname = postname;
@@ -30,75 +27,84 @@
                 this.food = food;
                 this.recipe = recipe;
                 this.feedLikes = feedLikes;
-
-
             }
 
             /* toString method to return information about products */
+
             toString() {
 
-                return ('<h1>' + this.postname + '</h1>' + '<br>' + this.img + '<br>' + '<h2 class="diet">' + this.diet + '</h2>' + '<h2 class="food">' + this.food + '</h2>' + '<h2 class="recipe">' + this.recipe + '</h2>' + '<p>' + this.feedLikes + '</p>');
-
+                return ('<h1>' + this.postname + '</h1>' + '<br>' + this.img + '<br>' + '<h2 class="diet">' + this.diet + '</h2>' + '<h2 class="food">' + this.food + '</h2>' + '<h2 class="recipe">' + this.recipe + '</h2>' + '<div class="likes">' +
+                    '<button type="button" onclick="like(1)" class="nice" id="niceButton">&#128077<span class="feelings" id="niceLike">' + this.feedLikes + '</span></button>' + '<button type="button" onclick="like(2)" class="tasty" id="tastyButton">&#128523<span class="feelings" id="tastyLike">' + this.feedLikes + '</span></button>' + '<button type="button" onclick="like(3)" class="wow" id="wowButton">&#129321<span class="feelings" id="wowLike">' + this.feedLikes + '</span></button>' + '<br> <br>' + '</div>');
             }
         }
-
 
         //feed
         /* arrays for object properties */
         let feed = [];
-        let postnames = ['Apple Pie with Cinnamon', 'Delicious summer sallad with my own tomatoes and cucumbers', 'A great shakshouka', 'A homebaked focaccia', 'Lebanese food on a Saturday evening'];
-        let imgs = ['<img src="meal1.jpg" loading="lazy">', '<img src="meal2.jpg" loading="lazy">', '<img src="meal3.jpg" loading="lazy">', '<img src="meal4.jpg" loading="lazy">', '<img src="meal5.jpg" loading="lazy">'];
-        let diets = ['Vegetarian', 'Vegetarian', 'Omnivore', 'Omnivore', 'Vegan'];
-        let foods = ['Apple Pie', 'Sallad', 'Shakshouka', 'Focaccia', 'Lebanese food'];
-        let recipes = ['click for recipe'];
-        let feedLikes = ['56', '87', '45', '16', '98'];
+        let postnames = [
+            "Apple Pie with Cinnamon",
+            "Delicious summer sallad with my own tomatoes and cucumbers",
+            "A great shakshouka",
+            "A homebaked focaccia",
+            "Lebanese food on a Saturday evening",
+        ];
+        let imgs = [
+            '<img src="meal1.jpg" loading="lazy">',
+            '<img src="meal2.jpg" loading="lazy">',
+            '<img src="meal3.jpg" loading="lazy">',
+            '<img src="meal4.jpg" loading="lazy">',
+            '<img src="meal5.jpg" loading="lazy">',
+        ];
+        let diets = ["Vegetarian", "Vegetarian", "Omnivore", "Omnivore", "Vegan"];
+        let foods = [
+            "Apple Pie",
+            "Sallad",
+            "Shakshouka",
+            "Focaccia",
+            "Lebanese food",
+        ];
+        let recipes = ["click for recipe"];
+        let feedLikes = ["56", "87", "45", "16", "98"];
 
-        window.addEventListener('load', (event) => {
+        window.addEventListener("load", (event) => {
             for (let i = 0; i < 5; i++) {
-                feed.push(new Meal(postnames[i], imgs[i], diets[i], foods[i], recipes, feedLikes[i]));
+                feed.push(
+                    new Meal(
+                        postnames[i],
+                        imgs[i],
+                        diets[i],
+                        foods[i],
+                        recipes,
+                        feedLikes[i]
+                    )
+                );
                 /* displays object properties in img tag with variable */
             }
-            writeMoreInFeed()
-
-
-
-
+            writeMoreInFeed();
         });
 
-
-
-
-
         function writeMoreInFeed() {
-
             document.getElementById("post").innerHTML = "";
 
-
             for (let i = 0; i < feed.length; i++) {
-                document.getElementById("post").innerHTML += feed[i].toString() + "<br>";
+                document.getElementById("post").innerHTML +=
+                    feed[i].toString() + "<br>";
             }
-
         }
 
 
-
-
-
-
-
     </script>
-
 </head>
 
 <body>
     <nav>
         <div class="nav-bar-container">
             <div class="drop-down icon">
-                <img src="img/mealstagramMenuToggle-removebg.png" alt="" srcset="" />
+                <img src="img/mealstagramMenuToggle-removebg.png" alt="menu icon" />
                 <div class="sub-links container">
                     <ul>
                         <li><a href="create-profile.html">sign in</a></li>
-                        <li><a href="post.html">posts</a></li>
+                        <li><a href="post.html">post</a></li>
                         <li><a href="feed.html">feed</a></li>
                         <li><a href="profile.html">profile</a></li>
                         <li><a href="#">settings</a></li>
@@ -106,64 +112,45 @@
                 </div>
             </div>
             <div class="brand-name container">
-                <a href="landing.html">
+                <a href="index.html">
                     <p class="brand-name text">mealstagram</p>
                 </a>
             </div>
             <div class="message icon">
-                <img src="./img/msgIconNoBG.png" alt="" srcset="" />
+                <img src="./img/msgIconNoBG.png" alt="message icon" />
             </div>
         </div>
     </nav>
 
-
-
-
-
     <div class="center">
         <div class="post">
-            <img class="pluspost" src="img/feed.png" alt="a food symbol for the feed" loading="lazy">
+            <img class="pluspost" src="img/feed.png" alt="a food symbol for the feed" loading="lazy" />
             <h1>feed</h1>
         </div>
-
-        <div id="post" class="post">
-
-
-        </div>
-
-
-
-
-
+        <!-- div where all posts are published with a javascript function -->
+        <div id="post" class="post"></div>
     </div>
     <div class="center">
         <span class="post call_to_action">
-            <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post" loading="lazy"><a
-                href="post.html">
-                click here to add a post</a>
+            <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post" loading="lazy" /><a
+                href="post.html"> click here to add a post</a>
         </span>
     </div>
 
-
-
     <div class="footer-nav">
         <div class="content">
-            <img src="./img/feed.png" alt="feed icon" srcset="" />
-        </div>
-
-        <div class="content">
-            <img src="./img/plus.png" alt="post icon" srcset="" />
+            <a href="feed.html"><img src="./img/feed.png" loading="lazy" alt="feed" /></a>
         </div>
         <div class="content">
-            <img src="./img/profile.png" alt="profile icon" srcset="" />
+            <a href="post.html"><img src="./img/plus.png" loading="lazy" alt="post" /></a>
         </div>
         <div class="content">
-            <img src="./img/msgIconNoBG.png" alt="message icon" srcset="" />
+            <a href="profile.html"><img src="./img/profile.png" loading="lazy" alt="profile" /></a>
+        </div>
+        <div class="content">
+            <a href="#"><img src="./img/msgIconNoBG.png" loading="lazy" alt="message" /></a>
         </div>
     </div>
-
-
-
     <script>
         writeMoreInFeed();
 
@@ -176,16 +163,28 @@
             toggleDropdown.classList.toggle("show");
         });
 
+        // like button function
+
+        function like(bnum) {
+            if (bnum == 1) {
+                var like = document.getElementById("niceLike").innerHTML
+                like++
+                document.getElementById("niceLike").innerHTML = like
+                document.getElementById("niceButton").disabled = true;
+            } else if (bnum == 2) {
+                var like2 = document.getElementById("tastyLike").innerHTML
+                like2++
+                document.getElementById("tastyLike").innerHTML = like2
+                document.getElementById("tastyButton").disabled = true;
+            } else if (bnum == 3) {
+                var like3 = document.getElementById("wowLike").innerHTML
+                like3++
+                document.getElementById("wowLike").innerHTML = like3
+                document.getElementById("wowButton").disabled = true;
+            }
+        }
     </script>
 
-
-
-
-
 </body>
-
-
-
-
 
 </html>

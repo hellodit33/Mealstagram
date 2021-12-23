@@ -2,31 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mealstagram - Post a meal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="synkcss.css">
+    <link rel="stylesheet" href="synkcss.css" />
 
-    <meta name="keywords" content="cooking, dinner, lunch ideas, christmas dinner, rate food">
-
-
+    <meta name="keywords" content="cooking, dinner, lunch ideas, christmas dinner, rate food" />
 </head>
 
 <body>
     <nav>
         <div class="nav-bar-container">
             <div class="drop-down icon">
-                <img src="img/mealstagramMenuToggle-removebg.png" alt="" srcset="" />
+                <img src="img/mealstagramMenuToggle-removebg.png" alt="menu icon" />
                 <div class="sub-links container">
                     <ul>
                         <li><a href="create-profile.html">sign in</a></li>
-                        <li><a href="post.html">posts</a></li>
+                        <li><a href="post.html">post</a></li>
                         <li><a href="feed.html">feed</a></li>
                         <li><a href="profile.html">profile</a></li>
                         <li><a href="#">settings</a></li>
@@ -34,41 +32,38 @@
                 </div>
             </div>
             <div class="brand-name container">
-                <a href="landing.html">
+                <a href="index.html">
                     <p class="brand-name text">mealstagram</p>
                 </a>
             </div>
             <div class="message icon">
-                <img src="./img/msgIconNoBG.png" alt="" srcset="" />
+                <img src="./img/msgIconNoBG.png" alt="message icon" />
             </div>
         </div>
     </nav>
 
-
-
-
-
     <div class="center margin">
         <div class="post">
-            <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post" loading="lazy">
+            <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post" loading="lazy" />
             <h1>post</h1>
         </div>
 
-        <form>
+        <!-- inputs to post about a meal -->
+        <form class="post-form">
             <label for="postnameInput">Give a title to your meal:
-                <input type="text" name="postname" id="postnameInput" required></label><br>
+                <input type="text" name="postname" id="postnameInput" required /></label><br>
 
             <label class="label" for="imageInput">
-                <input type="file" id="imageInput" required>
-                <span>Upload your picture <img class="pluspost" src="img/plus.png"
-                        alt="a plus sign to add a meal post"></span></label>
+                <input type="file" id="imageInput" required />
+                <span>Upload your picture
+                    <img class="pluspost" src="img/plus.png" alt="a plus sign to add a meal post" /></span></label>
             <br>
 
-            <img id="myImg" src="#" alt="upload your image" style="display: none">
+            <!-- this img field is displayed when a picture is choosen in input file -->
 
+            <img id="myImg" src="#" alt="upload your image" style="display: none" />
 
-            <label id="dietLabel" for="dietInput" class="dietfield">What diet do you
-                have?
+            <label id="dietLabel" for="dietInput" class="dietfield">What diet do you have?
                 <select id="dietInput" class="dietfield" required>
                     <br>
                     <option></option>
@@ -76,70 +71,66 @@
             <br>
             <br>
 
-            <label id="foodLabel" for="foodInput" class="foodfield">What type of food is
-                it?
-                <select id="foodInput" class="foodfield" required><br>
+            <label id="foodLabel" for="foodInput" class="foodfield">What type of food is it?
+                <select id="foodInput" class="foodfield" required>
+                    <br>
                     <option></option>
                 </select></label>
             <br>
 
             <br>
 
-            <label for="recipeInput">Share your recipe or some advice: <br> <br>
+            <label for="recipeInput">Share your recipe or some advice: <br>
+                <br>
                 <textarea name="recipe" id="recipeInput" cols="30" rows="5"></textarea></label><br>
 
-            <label for="btn" class="button" onclick="addImageToTheFeed();">
-                <input type="button" id="btn" value="post your meal">
+            <!-- javascript function that creates objects meal -->
+
+            <label for="btn" class="button">
+                <input type="button" id="btn" value="post your meal" onclick="addImageToTheFeed();" />
                 <span>post your meal</span>
             </label>
-
         </form>
     </div>
+
     <div class="footer-nav">
         <div class="content">
-            <img src="./img/feed.png" alt="feed icon" srcset="" />
-        </div>
-
-        <div class="content">
-            <img src="./img/plus.png" alt="post icon" srcset="" />
+            <a href="feed.html"><img src="./img/feed.png" loading="lazy" alt="feed" /></a>
         </div>
         <div class="content">
-            <img src="./img/profile.png" alt="profile icon" srcset="" />
+            <a href="post.html"><img src="./img/plus.png" loading="lazy" alt="post" /></a>
         </div>
         <div class="content">
-            <img src="./img/msgIconNoBG.png" alt="message icon" srcset="" />
+            <a href="profile.html"><img src="./img/profile.png" loading="lazy" alt="profile" /></a>
         </div>
+        <div class="content">
+            <a href="#"><img src="./img/msgIconNoBG.png" loading="lazy" alt="message" /></a>
+        </div>
+    </div>
 
-        <script>
-
-
-
-            //göra en dropdown lista med alternativ för diets
-            let selectdiet = document.getElementById("dietInput");
-            let dietss = ["Omnivore", "Vegetarian", "Vegan", "Pescetarian"];
-            for (var i = 0; i < dietss.length; i++) {
-                var optionsList = dietss[i];
-                var list = document.createElement("option");
-                list.textContent = optionsList;
-                list.value = optionsList;
-                selectdiet.appendChild(list);
-            }
-            //Göra en dropdown lista med alternativ för type of food
-            let selectfood = document.getElementById("foodInput");
-            let foodss = ["Breakfast", "Lunch", "Coffee break", "Dinner"];
-            for (var i = 0; i < foodss.length; i++) {
-                var optionsList = foodss[i];
-                var list = document.createElement("option");
-                list.textContent = optionsList;
-                list.value = optionsList;
-                selectfood.appendChild(list);
-            }
-
-        </script>
-        <script src="app.js"></script>
-
+    <script>
+        //göra en dropdown lista med alternativ för diets
+        let selectdiet = document.getElementById("dietInput");
+        let dietss = ["Omnivore", "Vegetarian", "Vegan", "Pescetarian"];
+        for (var i = 0; i < dietss.length; i++) {
+            var optionsList = dietss[i];
+            var list = document.createElement("option");
+            list.textContent = optionsList;
+            list.value = optionsList;
+            selectdiet.appendChild(list);
+        }
+        //Göra en dropdown lista med alternativ för type of food
+        let selectfood = document.getElementById("foodInput");
+        let foodss = ["Breakfast", "Lunch", "Coffee break", "Dinner"];
+        for (var i = 0; i < foodss.length; i++) {
+            var optionsList = foodss[i];
+            var list = document.createElement("option");
+            list.textContent = optionsList;
+            list.value = optionsList;
+            selectfood.appendChild(list);
+        }
+    </script>
+    <script src="app.js"></script>
 </body>
-
-
 
 </html>
